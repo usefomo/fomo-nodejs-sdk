@@ -1,0 +1,9 @@
+*.swp
+*~
+.DS_Store
+.bundle
+tags
+node_modules
+*.sock
+*.iml
+.idea

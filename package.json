@@ -1,0 +1,21 @@
+{
+  "name": "fomo-nodejs-sdk",
+  "version": "1.0.0",
+  "description": "Fomo NodeJS SDK for Fomo service",
+  "author": "Fomo <hello@usefomo.com>",
+  "contributors": [
+    "Dean Gostiša"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/usefomo/fomo-nodejs-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/usefomo/fomo-nodejs-sdk/issues"
+  },
+  "main": "./lib",
+  "engines": {
+    "node": ">=0.10"
+  },
+  "license": "MIT"
+}

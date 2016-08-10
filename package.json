@@ -1,8 +1,8 @@
 {
   "name": "fomo-nodejs-sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Fomo NodeJS SDK for Fomo service",
-  "author": "Fomo <ryan@usefomo.com> (https://www.usefomo.com)",
+  "author": "Fomo <hello@usefomo.com> (https://www.usefomo.com)",
   "contributors": [
     "Dean Gostiša"
   ],

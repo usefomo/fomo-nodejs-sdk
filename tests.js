@@ -4,14 +4,13 @@
 
 /*jslint node: true */
 'use strict';
-var FomoClient = require('./lib/fomo_client.js');
-var FomoEventBasic = require('./lib/fomo_event_basic.js');
+var FomoClient = require('./lib/index');
 var assert = require('assert');
 
 var client = new FomoClient('<token>');
 
-var basicEvent = new FomoEventBasic();
-basicEvent.event_type_id = '4';
+var basicEvent = client.FomoEventBasic();
+basicEvent.event_type_id = '183';
 basicEvent.title = 'Test event';
 basicEvent.first_name = 'Dean';
 basicEvent.city = 'San Francisco';

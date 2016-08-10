@@ -17,12 +17,12 @@ User Installation
     
 Initialize Fomo client via:
 
-    var Fomo = require('fomo-nodejs-sdk');
-    var client = Fomo.FomoClient('<token>');
+    var FomoClient = require('fomo-nodejs-sdk');
+    var client = new FomoClient('<token>');
 
 To create a new event:
 
-    var basicEvent = new Fomo.FomoEventBasic();
+    var basicEvent = client.FomoEventBasic();
     basicEvent.event_type_id = '4';
     basicEvent.title = 'Test event';
     basicEvent.first_name = 'Ryan';

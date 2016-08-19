@@ -15,6 +15,8 @@ basicEvent.title = 'Test event';
 basicEvent.first_name = 'Dean';
 basicEvent.city = 'San Francisco';
 basicEvent.url = 'https://www.usefomo.com';
+// Add event custom attribute value
+basicEvent.addCustomEventField('variable_name', 'value');
 
 // get all events
 client.getEvents(function (events) {
@@ -24,6 +26,8 @@ client.getEvents(function (events) {
     // create event
     client.createEvent(basicEvent, function (savedEvent) {
         assert.notEqual(savedEvent, null);
+        assert.equal(savedEvent.custom_event_fields_attributes[0]['key'], 'variable_name');
+        assert.equal(savedEvent.custom_event_fields_attributes[0]['value'], 'value');
         console.log(savedEvent);
 
         // try getting same event

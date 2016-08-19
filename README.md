@@ -28,6 +28,10 @@ To create a new event:
     basicEvent.first_name = 'Ryan';
     basicEvent.city = 'San Francisco';
     basicEvent.url = 'https://www.usefomo.com';
+    
+    // Add event custom attribute value
+    basicEvent.addCustomEventField('variable_name', 'value');
+    
     client.createEvent(basicEvent, function (savedEvent) {
         console.log(savedEvent);
     });

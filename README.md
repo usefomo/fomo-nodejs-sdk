@@ -20,10 +20,26 @@ Initialize Fomo client via:
     var FomoClient = require('fomo-nodejs-sdk');
     var client = new FomoClient('<token>');
 
-To create a new event:
+To create a new event with template name:
 
     var basicEvent = client.FomoEventBasic();
-    basicEvent.event_type_id = '4';
+    basicEvent.event_type_tag = 'new-order'; // Event type tag is found on Fomo dashboard (Templates -> Template name)
+    basicEvent.title = 'Test event';
+    basicEvent.first_name = 'Ryan';
+    basicEvent.city = 'San Francisco';
+    basicEvent.url = 'https://www.usefomo.com';
+    
+    // Add event custom attribute value
+    basicEvent.addCustomEventField('variable_name', 'value');
+    
+    client.createEvent(basicEvent, function (savedEvent) {
+        console.log(savedEvent);
+    });
+    
+or with template ID:
+    
+    var basicEvent = client.FomoEventBasic();
+    basicEvent.event_type_id = '4'; // Event type ID is found on Fomo dashboard (Templates -> Template ID)
     basicEvent.title = 'Test event';
     basicEvent.first_name = 'Ryan';
     basicEvent.city = 'San Francisco';

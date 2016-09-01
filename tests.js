@@ -10,7 +10,7 @@ var assert = require('assert');
 var client = new FomoClient('<token>');
 
 var basicEvent = client.FomoEventBasic();
-basicEvent.event_type_id = '183';
+basicEvent.event_type_tag = 'new-order';
 basicEvent.title = 'Test event';
 basicEvent.first_name = 'Dean';
 basicEvent.city = 'San Francisco';

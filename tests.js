@@ -7,7 +7,7 @@
 var FomoClient = require('./lib/index');
 var assert = require('assert');
 
-var client = new FomoClient('MzBiGa33iD5ACNcQHPHX9A');
+var client = new FomoClient('<token>');
 
 var basicEvent = client.FomoEventBasic();
 basicEvent.event_type_tag = 'new_order';

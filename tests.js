@@ -7,10 +7,10 @@
 var FomoClient = require('./lib/index');
 var assert = require('assert');
 
-var client = new FomoClient('<token>');
+var client = new FomoClient('MzBiGa33iD5ACNcQHPHX9A');
 
 var basicEvent = client.FomoEventBasic();
-basicEvent.event_type_tag = 'new-order';
+basicEvent.event_type_tag = 'new_order';
 basicEvent.title = 'Test event';
 basicEvent.first_name = 'Dean';
 basicEvent.city = 'San Francisco';
@@ -26,6 +26,7 @@ client.getEvents(function (events) {
     // create event
     client.createEvent(basicEvent, function (savedEvent) {
         assert.notEqual(savedEvent, null);
+        console.log(savedEvent);
         assert.equal(savedEvent.custom_event_fields_attributes[0]['key'], 'variable_name');
         assert.equal(savedEvent.custom_event_fields_attributes[0]['value'], 'value');
         console.log(savedEvent);
@@ -52,16 +53,21 @@ client.getEvents(function (events) {
                     // wait database to update
                     setTimeout(function () {
                         // get all events
-                        client.getEvents(function (events) {
-                            console.log("Found events: " + events.length);
-                            assert.equal(events.length === 2, true);
-                            // delete created events
-                            client.deleteEvent(savedEvent.id, function (response) {
-                                assert.equal(response.message, "Event successfully deleted");
-                                client.deleteEvent(secondEvent.id, function (response) {
+                        client.getEventsWithMeta(function (data) {
+                            console.log(data);
+                            assert.equal(data.meta.total_count === 2, true);
+                            // get all events
+                            client.getEvents(function (events) {
+                                console.log("Found events: " + events.length);
+                                assert.equal(events.length === 2, true);
+                                // delete created events
+                                client.deleteEvent(savedEvent.id, function (response) {
                                     assert.equal(response.message, "Event successfully deleted");
-                                    client.getEvents(function (events) {
-                                        assert.equal(events.length === 0, true);
+                                    client.deleteEvent(secondEvent.id, function (response) {
+                                        assert.equal(response.message, "Event successfully deleted");
+                                        client.getEvents(function (events) {
+                                            assert.equal(events.length === 0, true);
+                                        });
                                     });
                                 });
                             });

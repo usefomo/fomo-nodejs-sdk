@@ -64,6 +64,13 @@ To get all events:
         console.log(events);
     });
     
+To get all events:
+    
+    client.getEventsWithMeta(function(data) {
+        console.log(data.events);
+        console.log(data.meta);
+    }, 30 /* page size */, 1 /* page number */);
+    
 To delete an event:
 
     client.deleteEvent("<id>", function(response) {

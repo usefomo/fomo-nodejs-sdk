@@ -1,10 +1,11 @@
 {
   "name": "fomo-nodejs-sdk",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Fomo NodeJS SDK for Fomo service",
   "author": "Fomo <hello@usefomo.com> (https://www.usefomo.com)",
   "contributors": [
-    "Dean Gostiša"
+    "Dean Gostiša",
+    "Ryan Kulp"
   ],
   "repository": {
     "type": "git",

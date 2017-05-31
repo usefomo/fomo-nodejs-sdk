@@ -26,7 +26,7 @@ To create a new event with template name:
     basicEvent.event_type_tag = 'new_order'; // Event type tag is found on Fomo dashboard (Templates -> Template name)
     basicEvent.title = 'Test event';
     basicEvent.first_name = 'Ryan';
-    basicEvent.email_address = 'ryan.kulp@usefomo.com';
+    basicEvent.email_address = 'ryan.kulp@usefomo.com'; // used to fetch Gravatar for notification images
     basicEvent.city = 'San Francisco';
     basicEvent.url = 'https://www.usefomo.com';
 

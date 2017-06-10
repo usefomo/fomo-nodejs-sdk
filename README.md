@@ -32,7 +32,8 @@ basicEvent.event_type_tag = 'new_order'; // Event type tag is found on Fomo dash
 basicEvent.title = 'Test event';
 basicEvent.first_name = 'Ryan';
 basicEvent.email_address = 'ryan.kulp@usefomo.com'; // used to fetch Gravatar for notification images
-basicEvent.city = 'San Francisco';
+basicEvent.ip_address = '128.177.108.102'; // used to extract location parameters (city, province, country)
+basicEvent.city = 'Atlanta';
 basicEvent.url = 'https://www.usefomo.com';
 
 // Add event custom attribute value
@@ -51,7 +52,6 @@ basicEvent.event_type_id = '4'; // Event type ID is found on Fomo dashboard (Tem
 basicEvent.title = 'Test event';
 basicEvent.first_name = 'Ryan';
 basicEvent.email_address = 'ryan.kulp@usefomo.com';
-basicEvent.city = 'San Francisco';
 basicEvent.url = 'https://www.usefomo.com';
 
 // Add event custom attribute value

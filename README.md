@@ -1,9 +1,9 @@
 Fomo-NodeJS-SDK
 ================
 
-*Fomo NodeJS SDK* is the official SDK wrapper for the [Fomo API service](https://www.usefomo.com)
+*Fomo NodeJS SDK* is the official SDK wrapper for the [Fomo API service](https://fomo.com)
 
-API docs: [http://docs.usefomo.com/reference](http://docs.usefomo.com/reference)
+API docs: [https://docs.fomo.com](https://docs.fomo.com)
 
 Requirements
 ------------
@@ -107,4 +107,4 @@ client.getEvent('<id>', function (event) {
 });
 ```
 
-If you have questions, email us at [hello@usefomo.com](mailto:hello@usefomo.com).
+If you have questions, email us at [hello@fomo.com](mailto:hello@fomo.com).

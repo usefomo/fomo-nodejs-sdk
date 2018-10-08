@@ -31,10 +31,10 @@ var basicEvent = client.FomoEventBasic();
 basicEvent.event_type_tag = 'new_order'; // Event type tag is found on Fomo dashboard (Templates -> Template name)
 basicEvent.title = 'Test event';
 basicEvent.first_name = 'Ryan';
-basicEvent.email_address = 'ryan.kulp@usefomo.com'; // used to fetch Gravatar for notification images
+basicEvent.email_address = 'ryan.kulp@fomo.com'; // used to fetch Gravatar for notification images
 basicEvent.ip_address = '128.177.108.102'; // used to extract location parameters (city, province, country)
 basicEvent.city = 'Atlanta';
-basicEvent.url = 'https://www.usefomo.com';
+basicEvent.url = 'https://fomo.com';
 
 // Add event custom attribute value
 basicEvent.addCustomEventField('variable_name', 'value');
@@ -51,8 +51,8 @@ var basicEvent = client.FomoEventBasic();
 basicEvent.event_type_id = '4'; // Event type ID is found on Fomo dashboard (Templates -> Template ID)
 basicEvent.title = 'Test event';
 basicEvent.first_name = 'Ryan';
-basicEvent.email_address = 'ryan.kulp@usefomo.com';
-basicEvent.url = 'https://www.usefomo.com';
+basicEvent.email_address = 'ryan.kulp@fomo.com';
+basicEvent.url = 'https://fomo.com';
 
 // Add event custom attribute value
 basicEvent.addCustomEventField('variable_name', 'value');

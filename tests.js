@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2017. Fomo. https://www.usefomo.com
+ * Copyright (c) 2018. Fomo. https://fomo.com
  **/
 
 /*jslint node: true */
@@ -14,7 +14,7 @@ basicEvent.event_type_tag = 'new_order';
 basicEvent.title = 'Test event';
 basicEvent.first_name = 'Dean';
 basicEvent.city = 'San Francisco';
-basicEvent.url = 'https://www.usefomo.com';
+basicEvent.url = 'https://fomo.com';
 // Add event custom attribute value
 basicEvent.addCustomEventField('variable_name', 'value');
 
